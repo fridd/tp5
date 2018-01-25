@@ -1,0 +1,35 @@
+@media screen and (max-width: 1200px) {
+    
+}
+@media screen and (min-width: 992px) {
+	.nav-s,.nav-ss{display: none;}
+}
+@media screen and (max-width: 992px){
+	.sidebar{display:none;}
+	.main{width: 100%;}
+	.nav-s,.nav-m{display: none;}
+	.nav-ss{display: block;}
+	#commentform .comment-form-author,
+	#commentform .comment-form-email,
+	#commentform .comment-form-url {
+		float: none;
+	}
+}
+@media screen and (max-width: 768px) {
+	#loading{display:none;}
+	.page-left{width:81%;}
+	.carousel-control{display: none;}
+	.top-box{display:none;}
+	.nav-s{display: block;}
+	.nav-ss,.nav-m{display: none;}
+	#nav{width: 100%;z-index: 80;}
+	.post_box aside .mu-ml{display: none;}
+	#f-top .erwei{display: none;}
+	.container-mumu{ width: 98%;}
+	.carousel-caption{display: none;}
+	.post_box .post-img{display: none;}
+	.single-box aside span:first-child{display:none;}
+	#commentform .comment-form-author .required, .comment-form-email .required, .comment-form-url .required{width: 0;}
+	.archives h3{float:none;}
+	.archives-list{margin: 0 0 20px 0px;}
+}

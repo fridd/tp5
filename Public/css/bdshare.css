@@ -1,0 +1,12 @@
+#mumu-bdshare {margin-bottom: 30px;text-align: right;padding-top: 20px;}
+#mumu-bdshare a{width:24px;height:24px;display:inline-block;margin-right:5px;background-image:url("../images/share.png")/*tpa=http://www.shipinteam.com/wp-content/themes/mumu/images/share.png*/;cursor:pointer;margin-bottom:-8px;opacity:.8;position:relative;top:-2px;float: none;}
+#mumu-bdshare a:hover{opacity: 1}
+#mumu-bdshare .bds_tsina{background-position: 0 0;}
+#mumu-bdshare .bds_weixin{background-position: 0 -32px;}
+#mumu-bdshare .bds_qzone{background-position: 0 -65px;}
+#mumu-bdshare .bds_sqq{background-position: 0 -98px;}
+#mumu-bdshare .bds_renren{background-position: 0 -131px;}
+#mumu-bdshare .bds_tqq{background-position: 0 -163px;}
+#mumu-bdshare .bds_douban{background-position: 0 -196px;}
+#mumu-bdshare .bds_fbook{background-position: 0 -226px;}
+#bds_conuts { border-left: solid 1px #DDD; padding: 0 12px 0 12px; margin-left: 5px ;background: none;}
