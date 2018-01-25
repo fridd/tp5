@@ -8,17 +8,17 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="RushCrm">
-<link href="/Public/css/home/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/hanteng/Public/css/home/bootstrap.css" rel="stylesheet" type="text/css">
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/Public/js/home/jquery-1.11.1.min.js"></script>
+<script src="/hanteng/Public/js/home/jquery-1.11.1.min.js"></script>
 <!-- Custom Theme files -->
-<link href="/Public/css/home/style.css" rel="stylesheet" type="text/css">
+<link href="/hanteng/Public/css/home/style.css" rel="stylesheet" type="text/css">
 <!-- Custom Theme files -->
 <!-- Add fancyBox main JS and CSS files -->
-<script src="/Public/js/home/jquery.magnific-popup.js" type="text/javascript"></script>
-<link href="/Public/css/home/popup.css" rel="stylesheet" type="text/css">
-<script src="/Public/js/home/pc_nb.js" charset="UTF-8"></script>
-<link rel="stylesheet" type="text/css" href="/Public/css/home/main.css">
+<script src="/hanteng/Public/js/home/jquery.magnific-popup.js" type="text/javascript"></script>
+<link href="/hanteng/Public/css/home/popup.css" rel="stylesheet" type="text/css">
+<script src="/hanteng/Public/js/home/pc_nb.js" charset="UTF-8"></script>
+<link rel="stylesheet" type="text/css" href="/hanteng/Public/css/home/main.css">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
         <div class="header_top">
             <div class="logo">
                 <a href="<?php echo U('Index/index');?>">
-                    <img src="/Public<?php echo ($company["logo"]); ?>" alt="<?php echo ($company["company_name"]); ?>">
+                    <img src="/hanteng/Public<?php echo ($company["logo"]); ?>" alt="<?php echo ($company["company_name"]); ?>">
                 </a>
             </div>
             <div class="cssmenu">
@@ -46,7 +46,7 @@
                 <li <?php if($action == 'recruit'): ?>class="active"<?php endif; ?>><a href="<?php echo U('Recruit/recruit_list');?>" title="公司招聘" target="">公司招聘</a></li>
                 <li <?php if($action == 'contact'): ?>class="active"<?php endif; ?>><a href="<?php echo U('Contact/index');?>" title="联系我们" target="">联系我们</a></li>
             </ul>
-            <script type="text/javascript" src="/Public/js/home/nav.js"></script>
+            <script type="text/javascript" src="/hanteng/Public/js/home/nav.js"></script>
         </div>
         <!-- end h_menu4 -->
     </div>
@@ -88,7 +88,7 @@
 
                     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="box">
                         <div class="context">
-                            <h3><a href=""><?php echo ($v["title"]); ?></a></h3>
+                            <h3><a href="<?php echo U('Article/article_detail',array('id'=>$v['id']));?>"><?php echo ($v["title"]); ?></a></h3>
                             <h4><?php echo ($v["public_date"]); ?> | 浏览 : <?php echo ($v["hits"]); ?></h4>
                             <p><?php echo ($v["content"]); ?></p>
                             <a class="faq_but1" href="<?php echo U('Article/article_detail',array('id'=>$v['id']));?>">了解更多</a>

@@ -8,17 +8,17 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="RushCrm">
-<link href="/Public/css/home/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/hanteng/Public/css/home/bootstrap.css" rel="stylesheet" type="text/css">
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/Public/js/home/jquery-1.11.1.min.js"></script>
+<script src="/hanteng/Public/js/home/jquery-1.11.1.min.js"></script>
 <!-- Custom Theme files -->
-<link href="/Public/css/home/style.css" rel="stylesheet" type="text/css">
+<link href="/hanteng/Public/css/home/style.css" rel="stylesheet" type="text/css">
 <!-- Custom Theme files -->
 <!-- Add fancyBox main JS and CSS files -->
-<script src="/Public/js/home/jquery.magnific-popup.js" type="text/javascript"></script>
-<link href="/Public/css/home/popup.css" rel="stylesheet" type="text/css">
-<script src="/Public/js/home/pc_nb.js" charset="UTF-8"></script>
-<link rel="stylesheet" type="text/css" href="/Public/css/home/main.css">
+<script src="/hanteng/Public/js/home/jquery.magnific-popup.js" type="text/javascript"></script>
+<link href="/hanteng/Public/css/home/popup.css" rel="stylesheet" type="text/css">
+<script src="/hanteng/Public/js/home/pc_nb.js" charset="UTF-8"></script>
+<link rel="stylesheet" type="text/css" href="/hanteng/Public/css/home/main.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         <div class="header_top">
             <div class="logo">
                 <a href="<?php echo U('Index/index');?>">
-                    <img src="/Public<?php echo ($company["logo"]); ?>" alt="<?php echo ($company["company_name"]); ?>">
+                    <img src="/hanteng/Public<?php echo ($company["logo"]); ?>" alt="<?php echo ($company["company_name"]); ?>">
                 </a>
             </div>
             <div class="cssmenu">
@@ -47,7 +47,7 @@
                 <li <?php if($action == 'recruit'): ?>class="active"<?php endif; ?>><a href="<?php echo U('Recruit/recruit_list');?>" title="公司招聘" target="">公司招聘</a></li>
                 <li <?php if($action == 'contact'): ?>class="active"<?php endif; ?>><a href="<?php echo U('Contact/index');?>" title="联系我们" target="">联系我们</a></li>
             </ul>
-            <script type="text/javascript" src="/Public/js/home/nav.js"></script>
+            <script type="text/javascript" src="/hanteng/Public/js/home/nav.js"></script>
         </div>
         <!-- end h_menu4 -->
     </div>
@@ -61,12 +61,12 @@
                 <ul>
                     <?php if(is_array($banners)): $i = 0; $__LIST__ = $banners;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li>
                         <a href="#">
-                            <img src="/Public<?php echo ($v["img_url"]); ?>" alt="<?php echo ($v["banner_name"]); ?>">
+                            <img src="/hanteng/Public<?php echo ($v["img_url"]); ?>" alt="<?php echo ($v["banner_name"]); ?>">
                         </a>
                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
-            <div class="btnBg"></div>
+            <div class="btnBg"> THINK_VERSION </div>
             <div class="btn">
                 <?php if(is_array($banners)): $k = 0; $__LIST__ = $banners;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?><span <?php if($k == 1): ?>class="ON"<?php endif; ?>></span><?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
@@ -74,16 +74,49 @@
             <div class="preNext next"></div>
         </div>
         <style type="text/css">
-            @media (min-width: 1200px){
-                .banner{background: none;}
+            .banner{background: none;}
+
+            @media (min-width: 1280px){
+                .banner{min-height: 400px;}
                 #Banner_div_banner{height:400px;}
                 #Banner_div_banner ul li img{width:100%;height:400px;}
             }
-
-            @media (max-width: 768px){
+            @media screen and (max-width: 1279px){
+                .banner{min-height: 380px;}
+                #Banner_div_banner{height:380px;}
+                #Banner_div_banner ul li img{width:100%;height:380px;}
+            }
+            @media screen and (max-width: 1024px){
+                .banner{min-height: 305px;}
+                #Banner_div_banner{height:305px;}
+                #Banner_div_banner ul li img{width:100%;height:305px;}
+            }
+            @media screen and (max-width: 920px){
+                .banner{min-height: 275px;}
+                #Banner_div_banner{height:275px;}
+                #Banner_div_banner ul li img{width:100%;height:275px;}
+            }
+            @media screen and (max-width: 768px){
+                .banner{min-height: 230px;}
+                #Banner_div_banner{height:230px;}
+                #Banner_div_banner ul li img{width:100%;height:230px;}
+            }
+            @media screen and (max-width: 667px){
+                .banner{min-height: 150px;}
                 #Banner_div_banner{height:150px;}
                 #Banner_div_banner ul li img{width:100%;height:150px;}
             }
+            @media screen and (max-width: 480px){
+                .banner{min-height: 145px;}
+                #Banner_div_banner{height:145px;}
+                #Banner_div_banner ul li img{width:100%;height:145px;}
+            }
+            @media screen and (max-width: 320px){
+                .banner{min-height: 95px;}
+                #Banner_div_banner{height:95px;}
+                #Banner_div_banner ul li img{width:100%;height:95px;}
+            }
+
 
             #focus {
                 height: auto;
@@ -167,7 +200,7 @@
     <div class="container">
         <div class="box3">
             <div class="col-md-6">
-                <img src="/Public/images/home/index-1.png" class="img-responsive" alt="CRM提升企业效率">
+                <img src="/hanteng/Public/images/home/index-1.png" class="img-responsive" alt="CRM提升企业效率">
             </div>
             <div class="col-md-6 row_2" style="padding: 0 0 0 0;">
                 <h2 class="h_2">
@@ -196,7 +229,7 @@
                 </p>
             </div>
             <div class="col-md-6">
-                <img src="/Public/images/home/index-2.png" class="img-responsive" alt="CRM提升企业业绩">
+                <img src="/hanteng/Public/images/home/index-2.png" class="img-responsive" alt="CRM提升企业业绩">
             </div>
             <div class="clearfix"></div>
         </div>
@@ -206,7 +239,7 @@
     <div class="container">
         <div class="box3">
             <div class="col-md-6">
-                <img src="/Public/images/home/index-3.png" class="img-responsive" alt="CRM降低企业成本">
+                <img src="/hanteng/Public/images/home/index-3.png" class="img-responsive" alt="CRM降低企业成本">
             </div>
             <div class="col-md-6 row_2" style="padding: 0 0 0 0;">
                 <h2 class="h_2">
@@ -233,7 +266,7 @@
                 </p>
             </div>
             <div class="col-md-6">
-                <img src="/Public/images/home/index-4.png" class="img-responsive" alt="CRM提升企业服务质量">
+                <img src="/hanteng/Public/images/home/index-4.png" class="img-responsive" alt="CRM提升企业服务质量">
             </div>
             <div class="clearfix"></div>
         </div>
@@ -243,7 +276,7 @@
     <div class="container">
         <div class="box3">
             <div class="col-md-6">
-                <img src="/Public/images/home/index-5.png" class="img-responsive" alt="CRM强化企业执行能力">
+                <img src="/hanteng/Public/images/home/index-5.png" class="img-responsive" alt="CRM强化企业执行能力">
             </div>
             <div class="col-md-6 row_2" style="padding: 0 0 0 0;">
                 <h2 class="h_2">
@@ -272,7 +305,7 @@
                 </p>
             </div>
             <div class="col-md-6">
-                <img src="/Public/images/home/index-6.png" class="img-responsive" alt="CRM完善企业管理体系">
+                <img src="/hanteng/Public/images/home/index-6.png" class="img-responsive" alt="CRM完善企业管理体系">
             </div>
             <div class="clearfix"></div>
         </div>
